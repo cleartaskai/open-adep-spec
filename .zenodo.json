@@ -1,0 +1,22 @@
+{
+  "title": "Open ADEP: Open AI Decision Evidence Protocol (Phase 0 Specifications and Schemas, v0.2.0-phase0)",
+  "upload_type": "software",
+  "description": "Open, vendor-neutral specification and JSON Schema (Draft 2020-12) suite for verifiable decision evidence packages in AI-assisted healthcare workflows, initially targeting prior authorization (PA). Defines healthcare decision-reconstruction semantics (binding clinical records, coverage policy versions, AI model inputs/outputs/identifications, human clinical review attestations, and adverse determination/appeal records), cross-organization evidence graphs with 10 trust-model roles and boundary-preserving privacy commitments, and independent verification separating cryptographic integrity (P-1/P-2) from scope completeness (P-5).",
+  "creators": [
+    {
+      "name": "<Your Last Name, First Name>",
+      "affiliation": "<Your Organization>"
+    }
+  ],
+  "keywords": [
+    "Open ADEP",
+    "prior authorization",
+    "healthcare AI",
+    "decision reconstruction",
+    "evidence package",
+    "JSON Schema",
+    "auditability",
+    "verifiable provenance"
+  ],
+  "license": "Apache-2.0"
+}
