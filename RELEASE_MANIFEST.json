@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "project": "Open ADEP",
+  "release": "v0.2.0-phase0",
+  "generated_at_utc": "2026-11-25T16:36:00Z",
+  "hash_algorithm": "sha256",
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 7456,
+      "sha256": "4e4d6191101cc1256377c0fdb3c7275a107f330770e9d05154b6b1234f60b500"
+    },
+    {
+      "path": "schemas/completeness-report.schema.json",
+      "bytes": 4916,
+      "sha256": "524dc4859730b3b824a1a3f71e297f04bed589473af8306497329cfd29829bde"
+    },
+    {
+      "path": "schemas/evidence-element-state.schema.json",
+      "bytes": 607,
+      "sha256": "7615abd3869767b0c0b69aed140db6aa9a16f27be9482430c7d83886741ccf11"
+    },
+    {
+      "path": "schemas/expected-evidence-classes.schema.json",
+      "bytes": 1119,
+      "sha256": "e770fe129652297d4058253b62f268b2e22be9d26aaa97f7df34c394a68309e7"
+    },
+    {
+      "path": "schemas/scope-declaration.schema.json",
+      "bytes": 2738,
+      "sha256": "b39e90def9635755e3b402e11f4eb321910b3368d8d697089ac5ea0aa33a3d81"
+    },
+    {
+      "path": "spec/WI-1-assurance-contract/assurance-contract-v02-draft.md",
+      "bytes": 75468,
+      "sha256": "845af0d6d4d5e5ca1596c506fa70cd4ac1d970fd9a3c6c7b22fcc76e06050720"
+    },
+    {
+      "path": "spec/WI-1-assurance-contract/conformance-claims-policy-annex.md",
+      "bytes": 8124,
+      "sha256": "ae4d59eabdd4c7a0a1081d244aa0c642bbf7e20deed0a4df07700cea523fc56e"
+    },
+    {
+      "path": "spec/WI-1-assurance-contract/m2-conformance-profile-annex.md",
+      "bytes": 13884,
+      "sha256": "fdd1e0c39ab9fd2166797e748aa7217946fa8ae46007b860c39df6f4e29c0484"
+    },
+    {
+      "path": "spec/WI-2-completeness-requirements/completeness-requirements-v02-draft.md",
+      "bytes": 55520,
+      "sha256": "124f80b7704472b10fda3feb43df8b92333b33764b32b064b51424974f0688a9"
+    },
+    {
+      "path": "spec/WI-3-trust-model/trust-model-v02-draft.md",
+      "bytes": 29408,
+      "sha256": "5c77ac765b05bd50351bcfd17fa43708895bb8939ef6bfa1a478e0ff1c98e9a7"
+    },
+    {
+      "path": "spec/WI-4-security-privacy-baseline/security-privacy-baseline-v01-draft.md",
+      "bytes": 60441,
+      "sha256": "ad534dd32203c02494a25cd2bbaff4eaa960bed2456cecb5edaa922e5c0d32da"
+    },
+    {
+      "path": "spec/WI-5-pa-workflow-profile/pa-workflow-profile-v0-draft.md",
+      "bytes": 27422,
+      "sha256": "22ae198857b61e3120f33a3e640d475a291050ff1f735ed82a041f0fc8210627"
+    }
+  ]
+}

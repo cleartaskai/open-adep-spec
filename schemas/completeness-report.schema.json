@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:open-adep:wi2:completeness-report",
+  "title": "Completeness report",
+  "description": "Normative annex to ADEP-WI2-CMP-v0.2 §4. W3-T01, 2026-10-25. AI draft for review. The dialect is JSON Schema draft 2020-12. The object has the eight fields in §4.2 and no ninth field. An ordering flag and an emergency_exception flag are not fields. Element state codes are the seven in the evidence-element-state fragment. This fragment does not add a verdict token.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profileReference",
+    "scopeCoverage",
+    "gapList",
+    "exclusionList",
+    "redactionList",
+    "disposalList",
+    "assessmentLimitations"
+  ],
+  "properties": {
+    "profileReference": {
+      "description": "§4.2. The profile identifier from the scope declaration, including the profile version.",
+      "type": "string",
+      "minLength": 1
+    },
+    "scopeCoverage": {
+      "description": "§4.2. presentClasses lists expected classes whose state is present. A redacted class is not in that list. percentage is omitted when the expected-class list is empty. That case is open item OI-3. The unit of percentage is percent.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "presentClasses"
+      ],
+      "properties": {
+        "presentClasses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "gapList": {
+      "description": "§4.2. Every class in expected_not_captured, unavailable, or arrived_late. reason is omitted when none is recorded. excluded and disposed are not entries.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "classId",
+          "state"
+        ],
+        "properties": {
+          "classId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "enum": [
+              "expected_not_captured",
+              "unavailable",
+              "arrived_late"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "exclusionList": {
+      "description": "§4.2. Every class in excluded. reason is the producer's statement that the class was not intended to be collected.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "classId",
+          "reason"
+        ],
+        "properties": {
+          "classId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "redactionList": {
+      "description": "§4.2. Every class in redacted. disclosureProfileReference is the profile identifier, or a statement that no disclosure profile is declared.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "classId",
+          "disclosureProfileReference"
+        ],
+        "properties": {
+          "classId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disclosureProfileReference": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "disposalList": {
+      "description": "§4.2. Every class in disposed. disposalPolicyReference names the documented retention or disposal policy.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "classId",
+          "disposalPolicyReference"
+        ],
+        "properties": {
+          "classId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposalPolicyReference": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "completenessVerdict": {
+      "description": "§4.3. One of the four verdicts. Omit the property for the unassigned case in open item OI-7. Omission is not a fifth verdict.",
+      "enum": [
+        "complete",
+        "incomplete_documented",
+        "incomplete_undocumented",
+        "indeterminate"
+      ]
+    },
+    "assessmentLimitations": {
+      "description": "§4.2. What this assessment cannot detect, including the limit NG-2 names.",
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

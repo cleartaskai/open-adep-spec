@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:open-adep:wi2:scope-declaration",
+  "title": "Scope declaration",
+  "description": "Normative annex to ADEP-WI2-CMP-v0.2 §2. W3-T01, 2026-10-25. AI draft for review. The dialect is JSON Schema draft 2020-12. The object has the seven elements in §2.2 and no eighth element. A time value is a non-empty string. No calendar format is named. The marker open is the ongoing-case value from §2.2.5. That reading stays open item OI-4. Class identifiers are non-empty strings. This fragment does not enumerate a profile's catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "workflowProfileReference",
+    "declaredCollectionScope",
+    "expectedEvidenceClasses",
+    "collectionStartTime",
+    "collectionEndTime",
+    "scopeVersion"
+  ],
+  "properties": {
+    "workflowProfileReference": {
+      "description": "§2.2.1. The profile identifier, including the profile version.",
+      "type": "string",
+      "minLength": 1
+    },
+    "declaredCollectionScope": {
+      "description": "§2.2.2. The subject and the activity boundaries. A retrospective note required by a profile is part of this string.",
+      "type": "string",
+      "minLength": 1
+    },
+    "expectedEvidenceClasses": {
+      "description": "§2.2.3. The instance list. The list may be empty. Each entry is a class identifier the referenced profile defines.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "collectionStartTime": {
+      "description": "§2.2.4. A time value the verifier can read. A non-empty string. Not, by itself, a P-6 anchor.",
+      "type": "string",
+      "minLength": 1
+    },
+    "collectionEndTime": {
+      "description": "§2.2.5. The marker open when the case is ongoing. Otherwise a non-empty string. The element is required on every declaration in this draft.",
+      "oneOf": [
+        {
+          "const": "open"
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "not": {
+            "const": "open"
+          }
+        }
+      ]
+    },
+    "scopeLimitations": {
+      "description": "§2.2.6. Known limits on collection. Omit the property, or use an empty array, when the producer states no limit. A limitation is not the state excluded.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "scopeVersion": {
+      "description": "§2.2.7. The version identifier of this declaration. No ordering scheme is defined. That scheme is open item OI-5.",
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

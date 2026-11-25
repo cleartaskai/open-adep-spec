@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:open-adep:wi5:expected-evidence-classes",
+  "title": "Expected evidence classes for adep.profile.pa.basic.v0",
+  "description": "Normative annex to ADEP-WI5-PA-v0. W3-T05, 2026-10-25. AI draft for review. The dialect is JSON Schema draft 2020-12, the same dialect as the completeness fragments. The array is the instance list for this profile. It may be empty, and it is not required to contain every class. PA-EC-20 through PA-EC-24 are defined and are not required in M2 test coverage. This fragment does not define PA-EC-16 through PA-EC-19.",
+  "type": "array",
+  "uniqueItems": true,
+  "items": {
+    "type": "string",
+    "enum": [
+      "PA-EC-01",
+      "PA-EC-02",
+      "PA-EC-03",
+      "PA-EC-04",
+      "PA-EC-05",
+      "PA-EC-06",
+      "PA-EC-07",
+      "PA-EC-08",
+      "PA-EC-09",
+      "PA-EC-10",
+      "PA-EC-11",
+      "PA-EC-12",
+      "PA-EC-13",
+      "PA-EC-14",
+      "PA-EC-15",
+      "PA-EC-20",
+      "PA-EC-21",
+      "PA-EC-22",
+      "PA-EC-23",
+      "PA-EC-24"
+    ]
+  }
+}

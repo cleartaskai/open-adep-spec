@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:open-adep:wi2:evidence-element-state",
+  "title": "Evidence element state",
+  "description": "Normative annex to ADEP-WI2-CMP-v0.2 §3. W3-T01, 2026-10-25. AI draft for review. The dialect is JSON Schema draft 2020-12. An evidence element has exactly one of these seven codes. This fragment adds no eighth code. There is no code named missing.",
+  "type": "string",
+  "enum": [
+    "present",
+    "redacted",
+    "excluded",
+    "expected_not_captured",
+    "unavailable",
+    "arrived_late",
+    "disposed"
+  ]
+}
